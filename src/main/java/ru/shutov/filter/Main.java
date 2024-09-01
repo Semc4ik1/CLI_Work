@@ -42,7 +42,7 @@ public class Main {
             for (Map.Entry<String, Filter<?>> entry : filters.entrySet()) {
                 String type = entry.getKey();
                 Filter<?> filter = entry.getValue();
-                List<?> converted = filter.convert(list, statType);
+                List<?> converted = filter.execute(list, statType);
                 Printer printer = PrinterCreator.create(
                         parameters.getOutputPath(),
                         parameters.getPrefix() + type + ".txt",

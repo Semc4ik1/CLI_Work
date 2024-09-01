@@ -21,7 +21,7 @@ public class Filter<T> {
         this.printer = printer;
     }
 
-    public List<T> convert(List<String> list, StatType statType) {
+    public List<T> execute(List<String> list, StatType statType) {
         List<T> converted = new ArrayList<>();
 
         Iterator<String> iterator = list.iterator();
